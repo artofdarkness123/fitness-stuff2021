@@ -22,12 +22,13 @@
       <input type="number" formControlName="neckLength" />
     </div>
     <button type="button" (click)="calculate()">Calculate</button>
-    <app-bmr-notes></app-bmr-notes>
-    <app-bmr-results [model]="model"></app-bmr-results>
-    <app-bmi-table></app-bmi-table>
-    <div>
-      BMI {{model.bmi | number: '1.0-2'}}
-    </div>
-    <app-bfi-table [gender]="GenderEnum.male"></app-bfi-table>
   </form>
+  <app-bmr-notes></app-bmr-notes>
+  <app-bmr-results [model]="model"></app-bmr-results>
+  <app-bmi-table></app-bmi-table>
+  <div *ngIf="model && model.bmi">
+    BMI {{model.bmi | number: '1.0-2'}}
+  </div>
+  <app-bfi-table [gender]="MaleGender"></app-bfi-table>
+  <app-heart-rate-grid [model]="model"></app-heart-rate-grid>
 </div>

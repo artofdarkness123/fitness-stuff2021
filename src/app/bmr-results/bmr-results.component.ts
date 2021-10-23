@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { person } from '../../models/person';
+import { Person } from '../../models/person';
 
 @Component({
   selector: 'app-bmr-results',
@@ -9,7 +9,7 @@ import { person } from '../../models/person';
 export class BmrResultsComponent implements OnInit {
 
   @Input()
-  public model!: person;
+  public model!: Person;
 
   constructor() {
   }

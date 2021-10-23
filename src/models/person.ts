@@ -1,4 +1,4 @@
-export interface person {
+export interface Person {
   weight: number;
   height: number;
   ageInYears: number;

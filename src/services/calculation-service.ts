@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { person } from "../models/person";
+import { Person } from "../models/person";
 import { uomConversionService } from "./uom-conversion-service";
 
 @Injectable()
@@ -9,7 +9,7 @@ export class CalculationService {
 
   }
 
-  public calculateMale(model: person): person {
+  public calculateMale(model: Person): Person {
     let heightInCM = this.uowConversionService.inchesToCentemeters(model.height);
     let heightInMeters = heightInCM / 100;
     let waistLengthInCM = this.uowConversionService.inchesToCentemeters(model.waistLength);

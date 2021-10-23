@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BmrResultsComponent } from './bmr-results/bmr-results.component';
 import { CommonModule } from '@angular/common';
 import { BfiTableComponent } from './bfi-table/bfi-table.component';
+import { HeartRateGridComponent } from './heart-rate-grid/heart-rate-grid.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BfiTableComponent } from './bfi-table/bfi-table.component';
     BMRNotesComponent,
     BmiTableComponent,
     BmrResultsComponent,
-    BfiTableComponent
+    BfiTableComponent,
+    HeartRateGridComponent
   ],
   imports: [
     CommonModule,

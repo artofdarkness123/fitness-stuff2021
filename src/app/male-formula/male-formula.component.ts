@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GenderEnum } from '../../models/gender-enum';
-import { person } from '../../models/person';
+import { Person } from '../../models/person';
 import { CalculationService } from '../../services/calculation-service';
 
 @Component({
@@ -12,8 +12,8 @@ import { CalculationService } from '../../services/calculation-service';
 export class MaleFormulaComponent implements OnInit {
 
   public form!: FormGroup;
-  public model!: person;
-  public GenderEnum = GenderEnum;
+  public model!: Person;
+  public readonly MaleGender: GenderEnum = GenderEnum.Male;
 
   constructor(
     private calculationService: CalculationService,
@@ -33,7 +33,7 @@ export class MaleFormulaComponent implements OnInit {
 
   public calculate(): void {
 
-    this.model = {} as person;
+    this.model = {} as Person;
 
     this.model.ageInYears = this.form.get('ageInYears')!.value;
     this.model.height = this.form.get('height')!.value;

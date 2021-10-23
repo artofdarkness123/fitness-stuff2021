@@ -1,0 +1,19 @@
+<div *ngIf="model">
+  <div style="color:blue">
+    Heart Rate
+  </div>
+  <div>
+    <div>
+      Max Heart Rate: {{model.maxHeartRatesBPM | number: '1.0-2'}} BPM
+    </div>
+    <div>
+      High Heart Rate: {{model.highHeartRateBPM | number: '1.0-2'}} BPM
+    </div>
+    <div>
+      Mid Heart Rate: {{model.midHeartRateBPM | number: '1.0-2'}} BPM
+    </div>
+    <div>
+      Low Heart Rate: {{model.lowHeartRateBPM | number: '1.0-2'}} BPM
+    </div>
+  </div>
+</div>
