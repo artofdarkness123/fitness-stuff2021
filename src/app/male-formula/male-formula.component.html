@@ -1,0 +1,33 @@
+<div *ngIf="form">
+  <form [formGroup]="form">
+    <h1>Male Formula</h1>
+    <div>
+      <span>Height (in inches)</span>
+      <input type="number" formControlName="height" />
+    </div>
+    <div>
+      <span>Weight (in pounds)</span>
+      <input type="number" formControlName="weight" />
+    </div>
+    <div>
+      <span>Age (in years)</span>
+      <input type="number" formControlName="ageInYears" />
+    </div>
+    <div>
+      <span>Waist Length (in inches)</span>
+      <input type="number" formControlName="waistLength" />
+    </div>
+    <div>
+      <span>Neck Length (in inches)</span>
+      <input type="number" formControlName="neckLength" />
+    </div>
+    <button type="button" (click)="calculate()">Calculate</button>
+    <app-bmr-notes></app-bmr-notes>
+    <app-bmr-results [model]="model"></app-bmr-results>
+    <app-bmi-table></app-bmi-table>
+    <div>
+      BMI {{model.bmi | number: '1.0-2'}}
+    </div>
+    <app-bfi-table [gender]="GenderEnum.male"></app-bfi-table>
+  </form>
+</div>

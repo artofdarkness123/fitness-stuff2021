@@ -1,0 +1,17 @@
+<div *ngIf="model">
+  <div>
+    Average BMR {{model.averageBMR | number: '1.0-2'}} calories per day
+  </div>
+  <div>
+    BMR {{model.bmr  | number: '1.0-2'}} calories per day
+  </div>
+  <div>
+    Original Harris-Benedict BMR {{model.originalHarrisBenedictBMR  | number: '1.0-2'}} calories per day
+  </div>
+  <div>
+    Revised Harris-Benedict BMR {{model.revisedHarrisBenedictBMR  | number: '1.0-2'}} calories per day
+  </div>
+  <div>
+    Mifflin St Jeor BMR {{model.mifflinStJeorBMR  | number: '1.0-2'}} calories per day
+  </div>
+</div>
