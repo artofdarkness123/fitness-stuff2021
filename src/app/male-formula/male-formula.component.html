@@ -29,6 +29,6 @@
   <div *ngIf="model && model.bmi">
     BMI {{model.bmi | number: '1.0-2'}}
   </div>
-  <app-bfi-table [gender]="MaleGender"></app-bfi-table>
+  <app-bfi-table [model]="model" [gender]="maleGender"></app-bfi-table>
   <app-heart-rate-grid [model]="model"></app-heart-rate-grid>
 </div>

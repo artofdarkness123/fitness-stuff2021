@@ -13,7 +13,7 @@ export class MaleFormulaComponent implements OnInit {
 
   public form!: FormGroup;
   public model!: Person;
-  public readonly MaleGender: GenderEnum = GenderEnum.Male;
+  public readonly maleGender: GenderEnum = GenderEnum.Male;
 
   constructor(
     private calculationService: CalculationService,

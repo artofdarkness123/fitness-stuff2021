@@ -67,4 +67,32 @@
     </tbody>
   </table>
 
+  <table *ngIf="model">
+    <thead>
+      <tr>
+        <td></td>
+        <td>Lean Body Mass <span>pounds</span></td>
+        <td>Body Fat Weight <span>pounds</span></td>
+        <td>BFI %</td>
+      </tr>
+    </thead>
+    <tr>
+      <td>Method1</td>
+      <td>{{model.leanBodyMass | number: '1.0-2'}}</td>
+      <td>{{model.bodyFatWeight | number: '1.0-2'}}</td>
+      <td>{{model.bfi | number: '1.0-2'}}</td>
+    </tr>
+    <tr>
+      <td>U.S. Navy BFI (developed by Drs. Hodgdon and Beckett)</td>
+      <td>{{model.leanBodyMassUSNavy | number: '1.0-2'}}</td>
+      <td>{{model.bodyFatWeightUSNavy | number: '1.0-2'}}</td>
+      <td>{{model.USNavyBFI | number: '1.0-2'}}</td>
+    </tr>
+    <tr>
+      <td>Average</td>
+      <td>{{model.leanBodyMassAverage | number: '1.0-2'}}</td>
+      <td>{{model.bodyFatWeightAverage | number: '1.0-2'}}</td>
+      <td>{{model.bfiAverage | number: '1.0-2'}}</td>
+    </tr>
+  </table>
 </div>
