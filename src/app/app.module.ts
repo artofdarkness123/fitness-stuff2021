@@ -17,6 +17,7 @@ import { BmrResultsComponent } from './bmr-results/bmr-results.component';
 import { CommonModule } from '@angular/common';
 import { BfiTableComponent } from './bfi-table/bfi-table.component';
 import { HeartRateGridComponent } from './heart-rate-grid/heart-rate-grid.component';
+import { FemaleFormulaComponent } from './female-formula/female-formula.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HeartRateGridComponent } from './heart-rate-grid/heart-rate-grid.compon
     BmiTableComponent,
     BmrResultsComponent,
     BfiTableComponent,
-    HeartRateGridComponent
+    HeartRateGridComponent,
+    FemaleFormulaComponent
   ],
   imports: [
     CommonModule,

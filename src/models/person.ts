@@ -2,8 +2,14 @@ export interface Person {
   weight: number;
   height: number;
   ageInYears: number;
-  waistLength: number;
-  neckLength: number;
+  waistLength: number; // at navel for women
+  neckLength: number; // at fullest point
+
+  //region For Women
+  wristMeasurement: number; // at fullest point
+  hipMeasurement: number; // at fullest point
+  forearmMeasurement: number; // at fullest point
+  //endregion
 
   //region Calculated Properties
   averageBMR: number;
