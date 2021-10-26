@@ -33,7 +33,7 @@
       <span>Forearm Measurement at fullest point (in inches)</span>
       <input type="number" formControlName="forearmMeasurement" />
     </div>
-    <button type="button" (click)="calculate()">Calculate</button>
+    <button [disabled]="!form.valid" type="button" (click)="calculate()">Calculate</button>
   </form>
   <app-bmr-notes></app-bmr-notes>
   <app-bmr-results [model]="model"></app-bmr-results>
