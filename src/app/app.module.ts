@@ -18,6 +18,9 @@ import { CommonModule } from '@angular/common';
 import { BfiTableComponent } from './bfi-table/bfi-table.component';
 import { HeartRateGridComponent } from './heart-rate-grid/heart-rate-grid.component';
 import { FemaleFormulaComponent } from './female-formula/female-formula.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { FemaleFormulaComponent } from './female-formula/female-formula.componen
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -43,7 +48,8 @@ import { FemaleFormulaComponent } from './female-formula/female-formula.componen
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [
     uomConversionService,

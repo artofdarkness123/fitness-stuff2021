@@ -1,8 +1,8 @@
 {
   "name": "fitness-stuff2021",
   "short_name": "fitness-stuff2021",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#FAD905",
+  "background_color": "#5B2E88",
   "display": "standalone",
   "scope": "./",
   "start_url": "./index.html",

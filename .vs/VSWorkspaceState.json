@@ -3,8 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\assets",
-    "\\src\\environments"
+    "\\src\\app\\male-formula"
   ],
+  "SelectedNode": "\\src\\app\\male-formula\\male-formula.component.ts",
   "PreviewInSolutionExplorer": false
 }

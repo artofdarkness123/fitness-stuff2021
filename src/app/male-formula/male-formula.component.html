@@ -1,27 +1,39 @@
 <div *ngIf="form">
   <form [formGroup]="form">
     <h1>Male Formula</h1>
-    <div>
-      <span>Height (in inches)</span>
-      <input required type="number" formControlName="height" />
+    <div class="man-formula-main-container">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Height (in inches)</mat-label>
+          <input matInput required type="number" formControlName="height" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Weight (in pounds)</mat-label>
+          <input matInput required type="number" formControlName="weight" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Age (in years)</mat-label>
+          <input matInput required type="number" formControlName="ageInYears" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Waist Length (in inches)</mat-label>
+          <input matInput required type="number" formControlName="waistLength" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Neck Length (in inches)</mat-label>
+          <input matInput required type="number" formControlName="neckLength" />
+        </mat-form-field>
+      </div>
     </div>
-    <div>
-      <span>Weight (in pounds)</span>
-      <input required type="number" formControlName="weight" />
-    </div>
-    <div>
-      <span>Age (in years)</span>
-      <input required type="number" formControlName="ageInYears" />
-    </div>
-    <div>
-      <span>Waist Length (in inches)</span>
-      <input required type="number" formControlName="waistLength" />
-    </div>
-    <div>
-      <span>Neck Length (in inches)</span>
-      <input required type="number" formControlName="neckLength" />
-    </div>
-    <button [disabled]="!form.valid" type="button" (click)="calculate()">Calculate</button>
+    <button mat-button [disabled]="!form.valid" type="button" (click)="calculate()">Calculate</button>
   </form>
   <app-bmr-notes></app-bmr-notes>
   <app-bmr-results [model]="model"></app-bmr-results>
