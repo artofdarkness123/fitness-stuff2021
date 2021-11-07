@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FemaleFormulaComponent } from './female-formula/female-formula.component';
 import { MaleFormulaComponent } from './male-formula/male-formula.component';
 import { SampleComponent } from './sample/sample.component';
+import { SharePageComponent } from './share-page/share-page.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'call-from-server',
     component: CallFromServerComponent
+  },
+  {
+    path: 'share-page',
+    component: SharePageComponent
   },
   {
     path: '',

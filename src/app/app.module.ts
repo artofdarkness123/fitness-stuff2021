@@ -1,9 +1,11 @@
+import { ClipboardModule } from '@angular/cdk/clipboard';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -22,9 +24,10 @@ import { CallFromServerComponent } from './call-from-server/call-from-server.com
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FemaleFormulaComponent } from './female-formula/female-formula.component';
 import { HeartRateGridComponent } from './heart-rate-grid/heart-rate-grid.component';
+import { LayoutModule } from './layout/layout.module';
 import { MaleFormulaComponent } from './male-formula/male-formula.component';
 import { SampleComponent } from './sample/sample.component';
-
+import { SharePageComponent } from './share-page/share-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { SampleComponent } from './sample/sample.component';
     BfiTableComponent,
     HeartRateGridComponent,
     FemaleFormulaComponent,
-    CallFromServerComponent
+    CallFromServerComponent,
+    SharePageComponent
   ],
   imports: [
     CommonModule,
@@ -49,6 +53,9 @@ import { SampleComponent } from './sample/sample.component';
     MatExpansionModule,
     BrowserModule,
     AppRoutingModule,
+    LayoutModule,
+    MatIconModule,
+    ClipboardModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
