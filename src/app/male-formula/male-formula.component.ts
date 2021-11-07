@@ -42,8 +42,6 @@ export class MaleFormulaComponent implements OnInit {
     this.model.neckLength = this.form.get('neckLength')!.value;
 
     this.model = this.calculationService.calculateMale(this.model);
-
-    console.log(this.model);
   }
 
 }

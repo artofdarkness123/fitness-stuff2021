@@ -35,7 +35,6 @@
     </div>
     <button [disabled]="!form.valid" type="button" (click)="calculate()">Calculate</button>
   </form>
-  <app-bmr-notes></app-bmr-notes>
   <app-bmr-results [model]="model"></app-bmr-results>
   <app-bmi-table></app-bmi-table>
   <div *ngIf="model && model.bmi">

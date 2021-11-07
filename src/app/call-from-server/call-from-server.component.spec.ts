@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BMRNotesComponent } from './bmr-notes.component';
+import { CallFromServerComponent } from './call-from-server.component';
 
-describe('BMRNotesComponent', () => {
-  let component: BMRNotesComponent;
-  let fixture: ComponentFixture<BMRNotesComponent>;
+describe('CallFromServerComponent', () => {
+  let component: CallFromServerComponent;
+  let fixture: ComponentFixture<CallFromServerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BMRNotesComponent ]
+      declarations: [ CallFromServerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BMRNotesComponent);
+    fixture = TestBed.createComponent(CallFromServerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

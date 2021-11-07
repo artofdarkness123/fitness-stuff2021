@@ -48,8 +48,6 @@ export class FemaleFormulaComponent implements OnInit {
     this.model.forearmMeasurement = this.form.get('forearmMeasurement')!.value;
 
     this.model = this.calculationService.calculateFemale(this.model);
-
-    console.log(this.model);
   }
 
 }

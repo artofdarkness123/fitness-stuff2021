@@ -1,26 +1,30 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { MaleFormulaComponent } from './male-formula/male-formula.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { SampleComponent } from './sample/sample.component';
-import { BMRNotesComponent } from './bmr-notes/bmr-notes.component';
-import { BmiTableComponent } from './bmi-table/bmi-table.component';
-import { uomConversionService } from '../services/uom-conversion-service';
 import { CalculationService } from '../services/calculation-service';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BmrResultsComponent } from './bmr-results/bmr-results.component';
-import { CommonModule } from '@angular/common';
+import { GetBaconService } from '../services/get-bacon-service';
+import { uomConversionService } from '../services/uom-conversion-service';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { BfiTableComponent } from './bfi-table/bfi-table.component';
-import { HeartRateGridComponent } from './heart-rate-grid/heart-rate-grid.component';
+import { BmiTableComponent } from './bmi-table/bmi-table.component';
+import { BmrResultsComponent } from './bmr-results/bmr-results.component';
+import { CallFromServerComponent } from './call-from-server/call-from-server.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { FemaleFormulaComponent } from './female-formula/female-formula.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
+import { HeartRateGridComponent } from './heart-rate-grid/heart-rate-grid.component';
+import { MaleFormulaComponent } from './male-formula/male-formula.component';
+import { SampleComponent } from './sample/sample.component';
+
 
 @NgModule({
   declarations: [
@@ -28,19 +32,21 @@ import { MatButtonModule } from '@angular/material/button';
     MaleFormulaComponent,
     DashboardComponent,
     SampleComponent,
-    BMRNotesComponent,
     BmiTableComponent,
     BmrResultsComponent,
     BfiTableComponent,
     HeartRateGridComponent,
-    FemaleFormulaComponent
+    FemaleFormulaComponent,
+    CallFromServerComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatInputModule,
     MatButtonModule,
+    MatExpansionModule,
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -53,7 +59,8 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   providers: [
     uomConversionService,
-    CalculationService
+    CalculationService,
+    GetBaconService
   ],
   bootstrap: [AppComponent]
 })

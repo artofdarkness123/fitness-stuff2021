@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\male-formula"
+    "\\src\\app\\call-from-server",
+    "\\src\\services"
   ],
-  "SelectedNode": "\\src\\app\\male-formula\\male-formula.component.ts",
+  "SelectedNode": "\\src\\app\\call-from-server\\call-from-server.component.html",
   "PreviewInSolutionExplorer": false
 }

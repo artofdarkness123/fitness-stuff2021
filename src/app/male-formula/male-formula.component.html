@@ -35,12 +35,51 @@
     </div>
     <button mat-button [disabled]="!form.valid" type="button" (click)="calculate()">Calculate</button>
   </form>
-  <app-bmr-notes></app-bmr-notes>
-  <app-bmr-results [model]="model"></app-bmr-results>
-  <app-bmi-table></app-bmi-table>
-  <div *ngIf="model && model.bmi">
-    BMI {{model.bmi | number: '1.0-2'}}
-  </div>
-  <app-bfi-table [model]="model" [gender]="maleGender"></app-bfi-table>
-  <app-heart-rate-grid [model]="model"></app-heart-rate-grid>
+  <mat-accordion *ngIf="model">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span>Basal Metabolic Rate (BMR)</span>
+          <!--the number of calories you'd burn if you stayed in bed all day.-->
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div>
+        <app-bmr-results [model]="model"></app-bmr-results>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span>Body Mass Index (BMI)</span>
+          <!--measurement of body fat based on height and weight.-->
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div>
+        <app-bmi-table></app-bmi-table>
+        <div *ngIf="model && model.bmi">
+          BMI {{model.bmi | number: '1.0-2'}}
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Body Fat Percentage a.k.a. Body Fat Index (BFI)
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div>
+        <app-bfi-table [model]="model" [gender]="maleGender"></app-bfi-table>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Heart Rate
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div>
+        <app-heart-rate-grid [model]="model"></app-heart-rate-grid>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
