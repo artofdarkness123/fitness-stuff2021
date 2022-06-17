@@ -3,9 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\call-from-server",
-    "\\src\\services"
+    "\\src\\app\\bfi-table"
   ],
-  "SelectedNode": "\\src\\app\\call-from-server\\call-from-server.component.html",
+  "SelectedNode": "\\src\\app\\bfi-table\\bfi-table.component.html",
   "PreviewInSolutionExplorer": false
 }

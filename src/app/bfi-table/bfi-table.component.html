@@ -1,98 +1,58 @@
 <div *ngIf="gender">
-  <h3 id="wiki_body_fat_percentage">Body Fat Percentage a.k.a. Body Fat Index (BFI)</h3>
-  <p><a href="https://en.wikipedia.org/wiki/Body_fat_percentage" rel="nofollow">Body Fat Percentage</a> (BF% or BFI) is also very common to track. BF% is the total mass of fat divided by total body mass; body fat includes essential body fat and storage body fat.  The percentage of essential body fat for women is greater than that for men, due to the demands of childbearing and other hormonal functions. A number of methods are available for determining body fat percentage, such as measurement with calipers or through the use of bioelectrical impedance analysis. The accuracy of these methods and devices vary, but comparing previous measurements with later measurements is often useful and motivating.</p>
-  <p style="font-weight:bold">
+  <h3>Body Fat Percentage a.k.a. Body Fat Index (BFI)</h3>
+  <p>
+    <a href="https://en.wikipedia.org/wiki/Body_fat_percentage">Body Fat Percentage</a> (BF% or BFI) is also very common to track. BF% is the total mass of fat divided by total body mass; body fat includes essential body fat and storage body fat.  The percentage of essential body fat for women is greater than that for men, due to the demands of childbearing and other hormonal functions. A number of methods are available for determining body fat percentage, such as measurement with calipers or through the use of bioelectrical impedance analysis. The accuracy of these methods and devices vary, but comparing previous measurements with later measurements is often useful and motivating.
+  </p>
+  <p class="bold">
     General Body Fat Percentage Categories
   </p>
+  <div class="bfi-table-grid-general-percentages" *ngIf="gender == GenderEnum.Male">
+    <div class="grid-item">Category</div>
+    <div class="grid-item">Men BF%</div>
+    <div>Essential Fat</div>
+    <div>2-5 %</div>
+    <div>Athletes</div>
+    <div>6-13 %</div>
+    <div>Fitness</div>
+    <div>14-17 %</div>
+    <div>Acceptable</div>
+    <div>18-24 %</div>
+    <div>Obese</div>
+    <div>25% +</div>
+  </div>
 
-  <table class="table" *ngIf="gender == GenderEnum.Male">
-    <thead>
-      <tr>
-        <th style="text-align:center;">Category</th>
-        <th style="text-align:center;">Men BF%</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="center">Essential Fat</td>
-        <td align="center">2-5 %</td>
-      </tr>
-      <tr>
-        <td align="center">Athletes</td>
-        <td align="center">6-13 %</td>
-      </tr>
-      <tr>
-        <td align="center">Fitness</td>
-        <td align="center">14-17 %</td>
-      </tr>
-      <tr>
-        <td align="center">Acceptable</td>
-        <td align="center">18-24 %</td>
-      </tr>
-      <tr>
-        <td align="center">Obese</td>
-        <td align="center">25% +</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="bfi-table-grid-general-percentages" *ngIf="gender == GenderEnum.Female">
+    <div class="grid-item">Category</div>
+    <div class="grid-item">Women BF%</div>
+    <div>Essential Fat</div>
+    <div>10-13 %</div>
+    <div>Athletes</div>
+    <div>14-20 %</div>
+    <div>Fitness</div>
+    <div>21-24 %</div>
+    <div>Acceptable</div>
+    <div>25-31 %</div>
+    <div>Obese</div>
+    <div>32% +</div>
+  </div>
+  <div class="bfi-table-grid-calc" *ngIf="model">
+    <div class="header-start">Lean Body Mass <span>pounds</span></div>
+    <div>Body Fat Weight <span>pounds</span></div>
+    <div>BFI %</div>
 
-  <table class="table" *ngIf="gender == GenderEnum.Female">
-    <thead>
-      <tr>
-        <th align="center">Category</th>
-        <th align="center">Women BF%</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="center">Essential Fat</td>
-        <td align="center">10-13 %</td>
-      </tr>
-      <tr>
-        <td align="center">Athletes</td>
-        <td align="center">14-20 %</td>
-      </tr>
-      <tr>
-        <td align="center">Fitness</td>
-        <td align="center">21-24 %</td>
-      </tr>
-      <tr>
-        <td align="center">Acceptable</td>
-        <td align="center">25-31 %</td>
-      </tr>
-      <tr>
-        <td align="center">Obese</td>
-        <td align="center">32% +</td>
-      </tr>
-    </tbody>
-  </table>
+    <div>Method1</div>
+    <div>{{model.leanBodyMass | number: '1.0-2'}}</div>
+    <div>{{model.bodyFatWeight | number: '1.0-2'}}</div>
+    <div>{{model.bfi | number: '1.0-2'}}</div>
 
-  <table *ngIf="model">
-    <thead>
-      <tr>
-        <td></td>
-        <td>Lean Body Mass <span>pounds</span></td>
-        <td>Body Fat Weight <span>pounds</span></td>
-        <td>BFI %</td>
-      </tr>
-    </thead>
-    <tr>
-      <td>Method1</td>
-      <td>{{model.leanBodyMass | number: '1.0-2'}}</td>
-      <td>{{model.bodyFatWeight | number: '1.0-2'}}</td>
-      <td>{{model.bfi | number: '1.0-2'}}</td>
-    </tr>
-    <tr>
-      <td>U.S. Navy BFI (developed by Drs. Hodgdon and Beckett)</td>
-      <td>{{model.leanBodyMassUSNavy | number: '1.0-2'}}</td>
-      <td>{{model.bodyFatWeightUSNavy | number: '1.0-2'}}</td>
-      <td>{{model.USNavyBFI | number: '1.0-2'}}</td>
-    </tr>
-    <tr>
-      <td>Average</td>
-      <td>{{model.leanBodyMassAverage | number: '1.0-2'}}</td>
-      <td>{{model.bodyFatWeightAverage | number: '1.0-2'}}</td>
-      <td>{{model.bfiAverage | number: '1.0-2'}}</td>
-    </tr>
-  </table>
+    <div>U.S. Navy BFI (developed by Drs. Hodgdon and Beckett)</div>
+    <div>{{model.leanBodyMassUSNavy | number: '1.0-2'}}</div>
+    <div>{{model.bodyFatWeightUSNavy | number: '1.0-2'}}</div>
+    <div>{{model.USNavyBFI | number: '1.0-2'}}</div>
+
+    <div>Average</div>
+    <div>{{model.leanBodyMassAverage | number: '1.0-2'}}</div>
+    <div>{{model.bodyFatWeightAverage | number: '1.0-2'}}</div>
+    <div>{{model.bfiAverage | number: '1.0-2'}}</div>
+  </div>
 </div>

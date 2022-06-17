@@ -21,5 +21,4 @@ export class BfiTableComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

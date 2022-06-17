@@ -28,6 +28,7 @@ import { LayoutModule } from './layout/layout.module';
 import { MaleFormulaComponent } from './male-formula/male-formula.component';
 import { SampleComponent } from './sample/sample.component';
 import { SharePageComponent } from './share-page/share-page.component';
+import { VideoTestComponent } from './video-test/video-test.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SharePageComponent } from './share-page/share-page.component';
     HeartRateGridComponent,
     FemaleFormulaComponent,
     CallFromServerComponent,
-    SharePageComponent
+    SharePageComponent,
+    VideoTestComponent
   ],
   imports: [
     CommonModule,

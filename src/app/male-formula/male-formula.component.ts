@@ -29,6 +29,19 @@ export class MaleFormulaComponent implements OnInit {
       waistLength: ['', Validators.compose([Validators.required, Validators.min(1)])],
       neckLength: ['', Validators.compose([Validators.required, Validators.min(1)])],
     });
+
+    if (!this.model) {
+
+      let temp = <Person>{
+        ageInYears: 32,
+        height: 71,
+        weight: 450,
+        waistLength: 58,
+        neckLength: 22
+      };
+
+      this.model = this.calculationService.calculateMale(temp);
+    }
   }
 
   public calculate(): void {

@@ -6,6 +6,7 @@ import { FemaleFormulaComponent } from './female-formula/female-formula.componen
 import { MaleFormulaComponent } from './male-formula/male-formula.component';
 import { SampleComponent } from './sample/sample.component';
 import { SharePageComponent } from './share-page/share-page.component';
+import { VideoTestComponent } from './video-test/video-test.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'share-page',
     component: SharePageComponent
+  },
+  {
+    path: 'video-test',
+    component: VideoTestComponent
   },
   {
     path: '',
