@@ -1,15 +1,21 @@
+@import '../../variables.scss';
 
 .bmi-table-title {
-  color: blue;
+  color: $blue;
 
   span {
-    font-weight: bold;
+    font-weight: $bold;
   }
 }
 
+.bmi-table-grid {
+  display: grid;
+  grid-template-columns: auto auto;
 
-.bmi-table-header {
-  font-style: italic;
-  font-weight: bold;
-  text-align: center;
+  .header {
+    grid-column: 1 / span 2;
+    font-style: italic;
+    font-weight: $bold;
+    text-align: center;
+  }
 }

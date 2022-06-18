@@ -1,10 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\app",
-    "\\src\\app\\bfi-table"
+    ""
   ],
-  "SelectedNode": "\\src\\app\\bfi-table\\bfi-table.component.html",
   "PreviewInSolutionExplorer": false
 }
